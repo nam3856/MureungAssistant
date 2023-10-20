@@ -26,7 +26,7 @@ const pipButton = document.querySelector('#pip_btn')
 async function startCapture() {
   try {
     const displayMediaOptions = { audio: false, video: {cursor: 'always'} }
-    cosnt captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
+    const captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     videoElement.srcObject = captureStream
     startButton.disabled = true
     stopButton.disabled = false
