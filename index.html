@@ -6,26 +6,34 @@
 
 </head>
 <body>
-  <video id="video" autoplay playsinline style="display:none;"></video>
   <video id="pip_video" autoplay playsinline style="display:none;"></video>
-  <button id="sharing_btn">화면 공유</button><br>
-  <button id="sharing_end_btn" disabled>화면 공유 중지</button><br>
-  <button id="pip_btn" disabled>PIP</button><br>
+  <button id="sharing_btn">화면 공유</button><br />
+  <button id="sharing_end_btn" disabled>화면 공유 중지</button><br />
+  <button id="pip_btn" disabled>PIP</button><br />
+  <br />
+  <video id="video" autoplay></video>
+  <br />
+  <strong>Log:</strong>
+<br />
+<pre id="log"></pre>
 
-  <div id="screen" style="display:none;">
-    <span id="monitoring_button" style="color:blue;text-decoration:underline;cursor:pointer;">공유 화면</span>
-    <canvas id="canvas" width="800" height="150" style="display:none;margin-left:0;margin-right:auto;max-width:100%;background-color:black;"></canvas>
-  </div>
 
 <script>
+console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
+console.error = (msg) =>
+  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
+
+
 const videoElement = document.querySelector('#video')
 const startButton = document.querySelector('#sharing_btn')
 const stopButton = document.querySelector('#sharing_end_btn')
 const pipButton = document.querySelector('#pip_btn')
+const videoElem = document.getElementById("video");
+const logElem = document.getElementById("log");
 
 async function startCapture() {
   try {
-    const displayMediaOptions = { audio: false, video: {cursor: 'always'} }
+    const displayMediaOptions = { video: {displaySurface: "window",}, audio: false, video: {cursor: 'always'} }
     const captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     videoElement.srcObject = captureStream
     startButton.disabled = true
