@@ -1,0 +1,10 @@
+@font-face {
+    font-family:'Maplestory';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.eot');
+    src: url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+				 url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.woff') format('woff'),
+				 url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.svg#NanumBarunGothic') format('svg'),
+        url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.ttf') format('truetype');
+}
