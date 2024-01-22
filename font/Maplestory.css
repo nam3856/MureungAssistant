@@ -1,10 +1,11 @@
+@charset "UTF-8";
+/*
+ * webfonts - 무료 한글 폰트를 웹폰트로 사용하기
+ */
+/* 메이플스토리 웹폰트 */
 @font-face {
-    font-family:'Maplestory';
-    font-weight: 400;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.eot');
-    src: url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
-				 url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.woff') format('woff'),
-				 url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.svg#NanumBarunGothic') format('svg'),
-        url('https://cdn.jsdelivr.net/gh/buppagi/webfonts/fonts/NanumBarunGothic.ttf') format('truetype');
+  font-family: "Maplestory";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Maplestory"), url("https://cdn.jsdelivr.net/gh/nam3856/MureungAssistant@main/font/Maplestory.eot"), url("https://cdn.jsdelivr.net/gh/nam3856/MureungAssistant@main/font/Maplestory.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/nam3856/MureungAssistant@main/font/Maplestory.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/nam3856/MureungAssistant@main/font/Maplestory.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/nam3856/MureungAssistant@main/font/Maplestory.svg#Maplestory") format("svg"), url("https://cdn.jsdelivr.net/gh/nam3856/MureungAssistant@main/font/Maplestory.ttf") format("truetype");
 }
